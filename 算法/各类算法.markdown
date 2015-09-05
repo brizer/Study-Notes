@@ -1,0 +1,15 @@
+﻿各类算法
+
+##**KMP算法**
+[中文版KMP][1]
+
+
+  [英文版KMP][2]
+
+
+  [1]: http://kb.cnblogs.com/page/176818/
+  [2]: http://jakeboxer.com/blog/2009/12/13/the-knuth-morris-pratt-algorithm-in-my-own-words/
+  
+  ------
+  
+  
