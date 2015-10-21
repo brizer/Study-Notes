@@ -8,3 +8,7 @@
 
 [http://segmentfault.com/a/1190000000733959]
 
+
+---
+#javascript模块化历程#
+[http://www.cnblogs.com/lvdabao/p/js-modules-develop.html]
