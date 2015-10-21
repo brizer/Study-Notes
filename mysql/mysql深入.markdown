@@ -9,8 +9,9 @@
 
 
   [1]: http://blog.codinglabs.org/articles/theory-of-mysql-index.html
+
   
-  ---
-  ##**数据库快照**
+---
+##**数据库快照**
   
   http://www.cnblogs.com/CareySon/archive/2012/03/30/2424880.html
