@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+#div_Back {
+	width:100px;
+	height: 3000px;
+	background-color: black;
+}
+.divX {
+	position: absolute;;
+	width:80px;
+	height: 50px;
+}
+#div_Front {
+	top:1000px;
+	background-color: red;
+}
+#div_FrontB {
+	top:1300px;
+	background-color: blue;
+}
+#div_FrontC {
+	top:1600px;
+	background-color: red;
+}
+#div_FrontD {
+	top:1900px;
+	background-color: blue;
+}
+#div_FrontE {
+	top:2200px;
+	background-color: red;
+}
+#div_FrontF {
+	top:2500px;
+	background-color: blue;
+}
+#div_FrontG {
+	top:2800px;
+	background-color: red;
+}
+#div_FrontH {
+	top:3100px;
+	background-color: blue;
+}
+</style>
+</head>
+<body>
+	<div id="div_Back"></div>
+	<div class="divX" id="div_Front"><img lazy_src="./img/test.jpg" alt="">未加载</div>
+	<div class="divX" id="div_FrontB"><img lazy_src="./img/test.jpg" alt="">未加载</div>
+	<div class="divX" id="div_FrontC"><img lazy_src="./img/test.jpg" alt="">未加载</div>
+	<div class="divX" id="div_FrontD"><img lazy_src="./img/test.jpg" alt="">未加载</div>
+	<div class="divX" id="div_FrontE"><img lazy_src="./img/test.jpg" alt="">未加载</div>
+	<div class="divX" id="div_FrontF"><img lazy_src="./img/test.jpg" alt="">未加载</div>
+	<div class="divX" id="div_FrontG"><img lazy_src="./img/test.jpg" alt="">未加载</div>
+	<div class="divX" id="div_FrontH"><img lazy_src="./img/test.jpg" alt="">未加载</div>
+</body>
+<script>
+	/**
+	 * @description: 返回浏览器的可视区域位置
+	 * @author:刘放
+	 * @date:2015/10/24 9:56
+	 * @return: left:左滑轮距离，top：上滑轮距离，width：可见区域宽度，height：可见区域长度
+	 */
+	 function getClient(){
+	 	var l,t,w,h;
+	 	l = document.documentElement.scrollLeft||document.body.scrollLeft;
+	 	t = document.documentElement.scrollTop||document.body.scrollTop;
+	 	w = document.documentElement.clientWidth;
+	 	h = document.documentElement.clientHeight;
+	 	return {left:l,top:t,width:w,height:h};
+	 }
+	/**
+	 * @description: 返回待加载资源位置
+	 * @author:刘放
+	 * @date:2015/10/24 10:05
+	 * @params: p:需要加载的资源节点
+	 * @return: left:左边距离，top：上边距离，width：宽度，height：高度
+	 */
+	 function getSubClient(p){
+	 	var l = 0, t = 0, w, h;
+	 	w = p.offsetWidth;
+	 	h = p.offsetHeight;
+	 	while(p.offsetParent){
+	 		l += p.offsetLeft;
+	 		t += p.offsetTop;
+	 		p = p.offsetParent;
+	 	} 
+	 	return {left:l,top:t,width:w,height:h};
+	 }
+	/**
+	 * @decription: 判断两个矩阵是否相交，返回一个布尔值
+	 * @author:刘放
+	 * @date:2015/10/24 10:23
+	 * @params: rec1,rec2:需要比较的节点矩阵
+	 * @return: true： 两矩阵相交
+	 */
+	 function contains(rec1,rec2){
+	 	var lc1,lc2,tc1,tc2,w1,h1;
+	 	lc1 = rec1.left + rec1.width/2;
+	 	lc2 = rec2.left + rec2.width/2;
+	 	tc1 = rec1.top + rec1.height/2;
+	 	tc2 = rec2.top + rec2.height/2;
+	 	w1 = (rec1.width + rec2.width)/2;
+	 	h1 = (rec1.height + rec2.height)/2;
+	 	return Math.abs(lc1 - lc2)<w1&&Math.abs(tc1 - tc2)<h1;
+	 }
+	 /**
+	  * @description: 资源出现在视野中再加载.将资源放入一个数组。
+	  */
+	  var arr = document.getElementsByClassName("divX");
+	  window.onscroll = function(){
+	  	var prec1 = getClient();
+	  	var prec2;
+	  	for(var i = arr.length-1;i>=0;i--){
+	  		if(arr[i]){
+	  			prec2 = getSubClient(arr[i]);
+	  			if(contains(prec1,prec2)){
+	  				//加载资源
+	  				console.log(arr[i].id);
+	  				arr[i].childNodes[0].src = arr[i].childNodes[0].getAttribute("lazy_src");
+	  				delete arr[i];
+	  			}
+	  		}
+	  	}
+	  }
+</script>
+</html>
