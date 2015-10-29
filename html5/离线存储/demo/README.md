@@ -14,8 +14,13 @@ FALLBACK:
 404.Html
 ```
 其中第一行的CACHE MANIFEST是必须要的标识
+
 v是版本号
+
 CACHE是要缓存的文件
+
 NETWORK是不需要缓存的文件
+
 FALLBACK是如果差不多文件，替换出现的文件
+
 
