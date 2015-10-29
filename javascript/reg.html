@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+
+	
+    function get_nums(str)
+    {
+        var arr=new Array();
+        var reg=/[a-zA-Z]/gm;
+        var obj=obj||{};
+
+        var matches = reg.exec(str);
+        while(matches){
+        	if(obj[matches[0]] == undefined)
+             {
+             	 obj[matches[0]] = 1;
+             }
+             else obj[matches[0]]++;
+        	matches = reg.exec(str);
+        }
+
+        var max=0;
+        var key;
+        for(var i in obj)
+        {
+        	 if(max < obj[i]){
+        	 	key = i;
+        	 	max = obj[i];
+        	 }
+        }
+        alert("the max is "+key+" the max num is "+max);
+      	
+    }
+    get_nums("ikahdfhakjlsdfh");
+	</script>
+</head>
+</html>
