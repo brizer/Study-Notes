@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+	#box{
+		width:200px;
+		height:200px;
+		background: #333;
+		color:white;
+		position: absolute;
+	}
+	</style>
+	<script type="text/javascript">
+    window.onload=function(){
+    	var node=document.getElementById("box");
+        var disX=0;
+        var disY=0;
+        node.onmousedown=function(e){
+             var oEvent=e||window.event;
+             //获取鼠标事件触发位置
+             disX=oEvent.clientX-node.offsetLeft;
+             console.log("disX:"+disX);
+             disY=oEvent.clientY-node.offsetTop;
+             console.log("disY:"+disY);
+
+             document.onmousemove=function(e)
+             {
+             	var oEvent1=e||window.event;
+             	//获取鼠标拖动位置
+             	var l=oEvent1.clientX-disX;
+             	console.log("l:"+l);
+             	var t=oEvent1.clientY-disY;
+             	console.log("t:"+t);
+             	if(l<0)
+             	{
+             		l=0;
+             	}
+             	else if(l>document.documentElement.clientWidth-node.offsetWidth){
+             		l=document.documentElement.clientWidth-node.offsetWidth;//横向移动的距离
+             	}
+             	if(t<0)
+             	{
+             		t=0;
+             	}else if(t>document.documentElement.clientHeight-node.offsetHeight)
+             	{
+                   t=document.documentElement.clientHeight-node.offsetHeight;//纵向移动距离
+             	}
+             	//调整盒子的位置
+             	node.style.left=l+"px";
+             	node.style.top=t+"px";
+             };
+             document.onmouseup=function(){
+             	//取消
+             	document.onmousemove=null;
+             	document.onmouseup=null;
+             }
+             return false;
+        }
+    }
+	</script>
+</head>
+<body>
+	<div id="box">
+    我是一个盒子
+	</div> 
+</body>
+</html>
