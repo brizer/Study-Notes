@@ -9,3 +9,11 @@
 
 
   [1]: http://coolshell.cn/articles/1846.html
+  
+  
+---
+
+##**跳出坑(上)**
+[链接][2]
+
+  [2]:http://www.csdn.net/article/2015-01-16/2823591
