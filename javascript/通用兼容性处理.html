@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+<script type="text/javascript">
+var GLOBAL = {}; 
+/**
+ * @description 命名空间方法
+ * @param str 命名空间名称
+ */
+GLOBAL.namespace = function(str){ 
+	var arr = str.split("."),
+	o = GLOBAL;  
+	for (i=(arr[0] == "GLOBAL") ? 1 : 0; i<arr.length; i++) {   
+		o[arr[i]]=o[arr[i]] || {};
+		o=o[arr[i]];    
+	}
+}
+//Dom相关
+GLOBAL.namespace("Dom"); 
+/**
+ * @description 获取下一兄弟节点s
+ * @param node 当前结点对象
+ * @return 其兄弟节点
+ */
+GLOBAL.Dom.getNextNode = function(node){
+	node = typeof node == "string" ? document.getElementById(node) : node;  
+	var nextNode = node.nextSibling; 
+	if(!nextNode) return null; 
+	if(!document.all){
+		//兼容回车换行
+		while(true){   
+			if(nextNode.nodeType == 1){
+				break;   
+			} else if(nextNode.nextSibling){    
+				nextNode = nextNode.nextSibling;     
+			} else{ 
+					break;     
+			}    
+			}   
+		}  
+	}  
+	return nextNode;
+}; 
+/**
+ * @description 设置透明度
+ * @param node 需要设置的对象
+ * @param level 透明度等级
+ */
+GLOBAL.Dom.setOpacity = function(node, level){ 
+	node = typeof node == "string" ? document.getElementById(node) : node;  
+	if (document.all){ 
+		node.style.filter = 'alpha(opacity=' + level + ')';  
+	} else {     
+		node.style.opacity = level / 100;  
+	} 
+} 
+/**
+ * @description 获取节点
+ * @param node 节点id或者节点本身
+ * @return 节点本身
+ */
+GLOBAL.Dom.get = function(node){  
+	node = typeof node == "string" ? document.getElementById(node) : node;  
+	return node;
+} 
+/**
+ * @description 通过class名称获取节点
+ * @param str class名称
+ * @param root 查询的起始父节点
+ * @param tag 需要查询的标签名称 
+ * @return 节点本身
+ */
+GLOBAL.Dom.getElementsByClassName = function(str,root,tag){  
+	if(root){  
+		root = typeof root == "string" ? document.getElementById(root) : root;  
+	} else {   
+		root = document.body; 
+	}  tag = tag || "*";
+	if(document.getElementsByClassName){
+		var result = root.getElementsByClassName(str);	
+		return result;
+	}
+	var els = root.getElementsByTagName(tag),arr = [];  
+	for(var i=0,n=els.length;i<n;i++){   
+		for(var j=0,k=els[i].className.split(" "),l=k.length;j<l;j++){   
+			if(k[j] == str){  
+				arr.push(els[i]);  
+				break;
+}   }  }  return arr; }  
+//Event相关
+GLOBAL.namespace("Event"); 
+/**
+ * @description 获取触发事件的源头节点
+ * @return 节点本身
+ */
+GLOBAL.Eevent.getEventTarget = function(e){  
+	e = window.event || e;
+	return e.srcElement || e.target; 
+} 
+/**
+ * @description 阻止事件冒泡
+ */
+GLOBAL.Event.stopPropagation = function(e){  
+	e = window.event || e;
+	if(document.all){
+		e.cancelBubble=true; 
+	} else { 
+		e.stopPropagation();   
+	} 
+} 
+/**
+ * @description 为结点绑定事件监听
+ * @param node 节点
+ * @param eventType 事件类型
+ * @param handler 需要执行的函数 
+ */
+GLOBAL.Event.on = function(node,eventType,handler){  
+	node = typeof node == "string" ? document.getElementById(node) : node;  
+	if(document.all){   
+		node.attachEvent("on"+eventType,handler);  
+	} else { 
+		node.addEventListener(eventType,handler,false);  
+	} 
+}
+/**
+ * @description 为结点移除事件监听
+ * @param node 节点
+ * @param eventType 事件类型
+ * @param handler 需要移除的函数 
+ */
+GLOBAL.Event.off = function(node,eventType,handler){  
+	node = typeof node == "string" ? document.getElementById(node) : node;  
+	if(document.all){   
+		node.detachEvent("on"+eventType,handler);  
+	} else { 
+		node.removeEnentListener(eventType,handler,false);  
+	} 
+}
+//Lang相关
+GLOBAL.namespace("Lang"); 
+GLOBAL.Lang.trim = function(ostr){  
+	return ostr.replace(/^\s+|\s+$/g,""); 
+} 
+GLOBAL.Lang.isNumber = function(s){  
+	return !isNaN(s); 
+}
+GLOBAL.Lang.extend = function(subClass,superClass){  
+	var F = function(){};     
+	F.prototype = superClass.prototype;     
+	subClass.prototype = new F();     
+	subClass.prototype.constructor = subClass;    
+	subClass.superclass = superClass.prototype;     
+	if(superClass.prototype.constructor == Object.prototype.constructor){ 
+		superClass.prototype.constructor = superClass;  
+	} 
+}
+</script>
+</html>
