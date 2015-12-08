@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style type="text/css">
+table,tr,td,th {
+  border:1px solid red;
+  border-collapse:collapse;
+}	
+th {
+  cursor: pointer;
+}
+</style>	
+</head>
+<body>
+<table id="table">
+  <thead>
+    <tr>
+      <th onclick = "lf.tableSort('table',0)">FirstName</th>
+      <th onclick = "lf.tableSort('table',1)">LastName</th>
+      <th onclick = "lf.tableSort('table',2,'date')">Date</th>
+      <th onclick = "lf.tableSort('table',3,'int')">Age</th>
+      <th onclick = "lf.tableSort('table',4,'float')">Money</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Liu</td>
+      <td>Fang</td>
+      <td>22/7/1992</td>
+      <td>24</td>
+      <td>16000.50</td>
+    </tr>
+    <tr>
+      <td>Tian</td>
+      <td>YuQing</td>
+      <td>4/14/1993</td>
+      <td>23</td>
+      <td>16000.33</td>
+    </tr>
+    <tr>
+      <td>Fang</td>
+      <td>Xiang</td>
+      <td>4/9/1992</td>
+      <td>24</td>
+      <td>8000.22</td>
+    </tr>
+    <tr>
+      <td>Hu</td>
+      <td>HongTao</td>
+      <td>2/10/1991</td>
+      <td>25</td>
+      <td>14000.32</td>
+    </tr>   
+  </tbody>
+</table>
+<script type="text/javascript">
+ lf = {
+ /**
+  * @description 判断选中的列是否经过排序，如果经过则倒置，如果未经过则进行排序操作
+  * @param id table的id
+  * @param col 选中的列的索引号
+  */
+  tableSort : function(id,col,dataType){
+    var table = document.getElementById(id);
+    var body = table.tBodies[0];
+    var rows = body.rows;
+    var arr = [];
+    for ( var i = 0 ;i < rows.length; i++ ){
+      arr[i] = rows[i];
+    };
+    //如果已经排序，则倒序
+    if(table.dataset.col == col){
+      arr.reverse();
+    } else {
+      arr.sort(this.diffSort(col,dataType));
+    }
+    //建立文档碎片批量操作
+    var fragment = document.createDocumentFragment();
+    for (var j = 0;j<arr.length;j++){
+      fragment.appendChild(arr[j]);
+    }
+    body.appendChild(fragment);
+    //设置一个状态
+    table.dataset.col = col;
+  },
+/**
+ * @description 根据列的索引和数据类型进行比较
+ * @param col 列的索引
+ * @param dataType 数据类型
+ * @author 刘放 2281858473@qq.com 
+ */
+  diffSort : function (col,dataType){
+    //返回比较函数
+    return function compare(tr1,tr2){
+      var value1,value2;
+      value1 = lf.convert(tr1.cells[col].firstChild.nodeValue,dataType);
+      value2 = lf.convert(tr2.cells[col].firstChild.nodeValue,dataType);
+      if(value1 < value2){
+        return -1;
+      } else if(value1>value2){
+        return 1;
+      } else {
+        return 0;
+      }
+    }
+  },
+/**
+ * @desciption 根据不同类型转换不同值
+ * @param value 值
+ * @param dataType 类型
+ */
+  convert : function(value,dataType){
+    switch(dataType){
+      case "int":
+        return parseInt(value);
+      case "float":
+        return parseFloat(value);
+      case "date":
+        return new Date(Date.parse(value));
+      default:
+        return value.toString();
+    }
+  },
+}
+	
+</script>	
+</body>
+</html>
