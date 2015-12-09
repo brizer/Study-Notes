@@ -1,0 +1,5 @@
+001.html 			基本的file.name size type属性
+002.html			拖拽图片文件显示图片内容 FileReader readAsDataURL
+003.html			拖拽txt文件显示文件内容 FileReader readAsText
+004.html            拖拽上传文件 和 005.php 配合
+005.php				上传文件后台

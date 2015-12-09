@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+#dropbox {
+	margin:0 auto;
+	width:200px;
+	height:200px;
+	background-color: red;
+}
+#preview {
+	margin:0 auto;
+	width:200px;
+	height: 200px;
+	background-color: blue;
+}
+</style>	
+</head>
+<body>
+	<div id="dropbox">
+	</div>
+	<div id="preview">		
+	</div>
+	<form action="" method="post">
+		<!-- <input type="file" name="mypic"> -->
+		<input type="submit" value="上传">
+	</form>
+<script>
+	var dropbox;
+	dropbox = document.getElementById("dropbox");
+	dropbox.addEventListener("dragenter",dragenter,false);
+	dropbox.addEventListener("dragover",dragover,false);	
+	dropbox.addEventListener("drop",drop,false);
+
+	function dragenter(e){
+		e.stopPropagation();
+		e.preventDefault();
+	}	
+	function dragover(e){
+		e.stopPropagation();
+		e.preventDefault();
+	}
+	function drop(e){
+		e.stopPropagation();
+		e.preventDefault();
+		//获取拖拽的文件对象
+		var dt = e.dataTransfer;
+		var files = dt.files;
+
+		handleFiles(files);
+	}
+/**
+ * @description 处理函数
+ * @param files 拖动的文件
+ * @data 2015/11/23 20:00
+ */
+	function handleFiles(files){
+		for (var i = 0,len = files.length; i <len ; i++){
+			var file = files[i];
+
+			var img = document.createElement("img");
+			img.classList.add("obj");
+			img.file = file;
+			var preview = document.getElementById("preview");
+			preview.appendChild(img);
+
+			var reader = new FileReader();
+			reader.onload = (function(aImg){
+				return function(e){
+					aImg.src = e.target.result;
+				};
+			})(img);
+			reader.readAsDataURL(file);
+
+			var xhr = new XMLHttpRequest();
+			xhr.open("post","005.php",true);
+
+			var fd = new FormData();
+			fd.append("mypic",file);
+
+			xhr.send(fd);
+		}
+	}
+</script>	
+</body>
+</html>

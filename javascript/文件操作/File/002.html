@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+#dropbox {
+	margin:0 auto;
+	width:200px;
+	height:200px;
+	background-color: red;
+}
+#preview {
+	margin:0 auto;
+	width:200px;
+	height: 200px;
+	background-color: blue;
+}
+</style>	
+</head>
+<body>
+	<div id="dropbox">
+	</div>
+	<div id="preview">		
+	</div>
+<script>
+	var dropbox;
+	dropbox = document.getElementById("dropbox");
+	dropbox.addEventListener("dragenter",dragenter,false);
+	dropbox.addEventListener("dragover",dragover,false);	
+	dropbox.addEventListener("drop",drop,false);
+
+	function dragenter(e){
+		e.stopPropagation();
+		e.preventDefault();
+	}	
+	function dragover(e){
+		e.stopPropagation();
+		e.preventDefault();
+	}
+	function drop(e){
+		e.stopPropagation();
+		e.preventDefault();
+		//获取拖拽的文件对象
+		var dt = e.dataTransfer;
+		var files = dt.files;
+
+		handleFiles(files);
+	}
+/**
+ * @description 处理函数
+ * 1.判断是否为image类型
+ * 2.创建一个img标签并加入preview
+ * 3.将img标签的src指定为拖拽的文件
+ * 4.readAsDataURL读取文件内容
+ * @param files 拖动的文件
+ * @data 2015/11/23 20:00
+ */
+
+	function handleFiles(files){
+		for (var i = 0,len = files.length; i <len ; i++){
+			var file = files[i];
+			var imageType = /^image\//;
+			if(!imageType.test(file.type)){
+				continue;
+			}
+			
+			var img = document.createElement("img");
+			img.classList.add("obj");
+			img.file = file;
+			var preview = document.getElementById("preview");
+			preview.appendChild(img);
+
+			var reader = new FileReader();
+			reader.onload = (function(aImg){
+				return function(e){
+					aImg.src = e.target.result;
+				};
+			})(img);
+			reader.readAsDataURL(file);
+		}
+	}
+</script>	
+</body>
+</html>
