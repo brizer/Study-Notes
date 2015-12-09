@@ -6,3 +6,8 @@ http://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=210646909&idx=1&sn=be46338d
 ---
 ##**雅虎性能优化军规**
 http://blog.sina.com.cn/s/blog_74d6cedd0100vbu4.html
+
+---
+##**预加载方法**
+http://bubkoo.com/2015/11/19/prefetching-preloading-prebrowsing/
+
