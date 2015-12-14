@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选中区域</title>
+<style type="text/css">
+.textarea {
+	width:200px;
+	height:200px;
+	border:1px dotted red;
+}	
+/*通过selection选择符控制选中区域样式*/
+/*http://www.w3school.com.cn/cssref/selector_selection.asp*/
+.selection p::selection{
+	color:red;
+	background-color:black;
+}
+</style>	
+</head>
+<body>
+	<div class="selection">
+		<p>Selection对象一般由window.getSelection()或其他方法产生。它代表页面中的文本选区，可能横跨多个元素。文本选区由用户拖拽鼠标经过文字而产生。 如果你想了解关于其他容纳纯文本的表单元素中的选区操作，请参考 Input, TextArea 和 document.activeElement ，我们可以在这些页面元素中使用 window.getSelection()。</p>
+	</div>
+	<hr>
+	<div class="textarea">
+		
+	</div>
+<script type="text/javascript">
+/**
+ * @description javascript通过window.getSelection方法来获取选中区域。
+ * 官方api      https://developer.mozilla.org/zh-CN/docs/Web/API/Selection
+ * date 2015/12/14 10:12
+ */
+	var selection = document.querySelector(".selection p");
+	var textarea = document.querySelector(".textarea");
+	selection.addEventListener("mouseup",function(){
+		var selected = window.getSelection();
+		textarea.innerHTML = selected.toString();
+		
+	},false);
+	selection.addEventListener("mousedown",function(){
+		textarea.innerHTML = '';
+	},false);
+</script>	
+</body>
+</html>
