@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script src="002.js"></script>
+</head>
+<body>
+	<select name="selection" id="selection">
+		<option value="0">baidu</option>
+		<option value="1" selected>ali</option>
+		<option value="2">ten</option>
+		<option value="3">xiaomi</option>
+	</select>
+<script>
+	var select = document.getElementById("selection");
+	var a = [];
+	a = document.querySelectorAll("a");
+	hasItem(select,"3");//true
+	getItemValue(select);//1
+	getItemIndex(select);//1
+	getItemText(select);//ali
+	setItemByValue(select,"3");//转到xiaomi项
+	setItemByText(select,"ten");//转到ten项
+</script>	
+</body>
+</html>
