@@ -16,3 +16,4 @@
 
 ---
 ##**随机数技巧**
+http://taobaofed.org/blog/2015/12/07/some-thing-about-random/
