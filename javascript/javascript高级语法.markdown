@@ -13,3 +13,6 @@
 
   [1]: http://www.nowamagic.net/librarys/veda/detail/1627
   [2]: http://www.cnblogs.com/coco1s/p/4833199.html
+
+---
+##**随机数技巧**
