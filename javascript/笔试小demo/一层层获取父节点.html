@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		<nav>
+			<ul>
+				<li>
+					<ul>
+						<li>
+							<p id="p">123</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+<script>
+/**
+ * @description 一层层获取父节点
+ * @param id 起点的id
+ * @author 刘放 brizer@foxmail.com 
+ * @date 2015/12/28
+ */
+	function getParents(id){
+		var startDom = document.getElementById(id);
+		var parent = startDom.parentNode;
+		while(parent.tagName){
+			document.writeln(parent.tagName);
+			parent = parent.parentNode;
+		}
+	}
+	getParents("p");
+</script>	
+</body>
+</html>

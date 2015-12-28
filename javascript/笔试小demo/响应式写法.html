@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+.header,.sidebar,.content {
+	height:80px;
+}
+.header {
+	background-color: red;
+	width:100%;
+}
+.content {
+	float:left;
+	background-color: green;
+	width:100%;
+	padding-left: 200px;
+}
+.sidebar {
+	position:relative;
+	float:left;
+	background-color: blue;
+	width:200px;
+	margin-left:-100%;
+	left:-200px;
+}
+/*当屏幕宽度小于600px时，应用下面的css样式*/
+@media screen and (max-width:600px){
+.content {
+	padding-left: 0;
+}
+.sidebar {
+	left:0;
+	margin-left:0;
+	width:100%;
+}
+}
+</style>	
+</head>
+<body>
+<!-- 要求：sidebar 固定宽度200px，content和header宽度自适应
+当window宽度小于600px时，变成三行布局	 -->
+<div class='header'>            
+	<h1>header</h1>        
+</div>
+<div class="content">
+	<h1>content</h1>
+</div>        
+<div class="sidebar">            
+	<h1>sidebar</h1>        
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+<script type="text/javascript">
+	var a=[1,1,2,3,4,3,5,4,2,6,5];
+	function XOR(a){
+		var b=0;
+		for(var i=0;i<a.length;i++){
+			b^=a[i];
+		}
+		return b;
+	}
+	var c=XOR(a);
+	alert(c);//6
+</script>
+</html>
