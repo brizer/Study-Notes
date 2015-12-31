@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+</style>		
+</head>
+<body>
+<script>
+//搜狐笔试题：实现一个URI解析方法，把url里#之后的参数解析成指定的数据结构。
+function urlParser(s){
+        //+++++++++++答题区域+++++++++++
+        var str = s.split("#")[1];
+        var resultArr = [];
+        var obj = {};
+        if(str.indexOf("?")==-1){
+                var arr = str.split("&");
+                for(var i=0;i<arr.length;i++){
+                        var key = arr[i].split("=")[0];
+                        var value = arr[i].split("=")[1];
+                        obj[key] = value;
+                }
+        }else{
+                var arrItem = str.split("?")[0];
+                var objItem = str.split("?")[1];
+                resultArr = arrItem.split("/");
+                var arr = objItem.split("&");
+                for(var i=0;i<arr.length;i++){
+                        var key = arr[i].split("=")[0];
+                        var value = arr[i].split("=")[1];
+                        obj[key] = value;
+                }
+        };
+        resultArr.push(obj);
+        return resultArr;               
+        //+++++++++++答题结束+++++++++++
+}
+
+try{
+        var url1 = "http://www.abc.com/m/s/#page/2/?type=latest_videos&page_size=20";
+        var url2 = "http://www.abc.com/m/s/#type=latest_videos&page_size=20";
+        var url3 = "http://www.abc.com/m/s/#page?type=latest_videos&page_size=20";
+
+        console.group();
+        console.info( urlParser(url1) );
+        console.info( urlParser(url2) );
+        console.info( urlParser(url3) );
+        console.groupEnd();
+        /*------[执行结果]------
+
+        ["page", "2", { "type": "latest_videos", "page_size": 20 }]
+        [{ "type": "latest_videos", "page_size": 20 }]
+        ["page", { "type": "latest_videos", "page_size": 20 }]
+        
+        ------------------*/
+        
+}catch(e){
+        console.error("执行出错，错误信息: " + e);
+}
+</script>
+</body>
+</html>

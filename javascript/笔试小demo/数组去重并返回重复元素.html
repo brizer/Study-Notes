@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+<style>
+</style>		
+</head>
+<body>
+<script>
+//淘宝笔试题： 请给Array本地对象增加一个原型方法，它的用途是删除数组条目中重复的条目(可能有多个)，返回值是一个包含被删除的重复条目的新数组。
+Array.prototype.distinct = function(){
+  var result = [];
+  var that =this;
+  this.forEach(function(value,index,array){
+    if(that.indexOf(value)!=that.lastIndexOf(value)&&result.indexOf(value)==-1){
+      that.splice(that.lastIndexOf(value),1);
+      result.push(value);
+    }
+  }); 
+  return result;       
+}
+var a =['a','b','c','d','a','b','c'];//a,b,c,d
+var b = a.distinct();//a,b,c
+console.log("b:"+b+",a:"+a);
+</script>
+</body>
+</html>

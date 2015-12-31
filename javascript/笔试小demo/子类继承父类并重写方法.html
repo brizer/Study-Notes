@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+</style>		
+</head>
+<body>
+<script>
+// 淘宝笔试题：
+// 小贤是一条可爱的小狗(Dog)，它的叫声很好听(wow)，每次看到主人的时候就会乖乖叫一声(yelp)。
+// 小芒和小贤一样，原来也是一条可爱的小狗，可是突然有一天疯了(MadDog)，一看到人就会每隔半秒叫一声(wow)地不停叫唤(yelp)。请根据描述，按示例的形式用代码来实现（提示关键字: 继承，原型，setInterval）。
+function Dog(){
+
+}
+Dog.prototype = {
+        wow : function(){
+                console.log("wow");
+        },
+        yelp : function(){
+                this.wow();
+        }
+}
+function MadDog(){
+        this.yelp = function(){
+                        var that = this;
+                        setInterval(function(){
+                                that.wow();
+                        },500);
+                 }; 
+}       
+
+MadDog.prototype = new Dog();
+var dog = new Dog();
+dog.yelp();
+var madDog = new MadDog();
+madDog.yelp();
+
+</script>
+</body>
+</html>

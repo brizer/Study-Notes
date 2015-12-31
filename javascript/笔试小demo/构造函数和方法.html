@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+</style>		
+</head>
+<body>
+<script>
+
+//搜狐笔试题：实现一个叫Man的类，包含attr, words, say三个方法。
+var Man;
+//+++++++++++答题区域+++++++++++
+Man = function(obj){
+        //如果没有new,则自动new一个对象
+        if(!(this instanceof Man)){
+                return new Man(obj);
+        }
+        for(var key in obj){
+                this['_'+key] = obj[key];
+        }
+        this.words_limit = 0;
+        this.words_emote = "";
+        this.word = [];
+}
+Man.prototype={
+        attr : function(key,value){
+                //实参只有一个，则取值
+                if(value == undefined){
+                        if(typeof key == "string"){
+                        //如果找到该属性则返回
+                                if(this['_'+key]){ 
+                                        return this['_'+key];
+                                }else{
+                                        return "<用户未输入>";
+                                }
+                        //如果是对象则挨个赋值        
+                        }else if(typeof key == "object"){
+                                for(var k in key){
+                                        switch(k){
+                                                case "words-limit":this.words_limit = key[k];
+                                                break;
+                                                case "words-emote":this.words_emote = key[k];
+                                                break;
+                                                default:break;
+                                        }
+                                }
+                        }
+                }else{
+                        //如果实参有两个则赋值
+                        if(typeof key =="string"){
+                                this['_'+key] = value;
+                        //如果是对象
+                        }                       
+                }
+        },
+        words : function(str){
+                this.word.push(str);
+        },
+        say : function(){
+                var result = this["_fullname"]+this.words_emote;
+                var arrayList = this.word.slice(0,this.words_limit);
+                for(var i = 0;i<this.words_limit;i++){
+                        result += arrayList.shift();
+                }
+                return result;
+        }
+}
+
+
+
+
+//+++++++++++答题结束+++++++++++
+
+try{
+        
+        var me = Man({ fullname: "小红" });
+        var she = new Man({ fullname: "小红" });
+
+        console.group();
+        console.info("我的名字是：" + me.attr("fullname") + "\n我的性别是：" + me.attr("gender"));
+        console.groupEnd();
+        /*------[执行结果]------
+
+        我的名字是：小红
+        我的性别是：<用户未输入>
+
+        ------------------*/
+
+        me.attr("fullname", "小明");
+        me.attr("gender", "男");
+        me.fullname = "废柴";
+        me.gender = "人妖"; 
+        she.attr("gender", "女");
+        
+        console.group();
+        console.info("我的名字是：" + me.attr("fullname") + "\n我的性别是：" + me.attr("gender"));
+        console.groupEnd();
+        /*------[执行结果]------
+
+        我的名字是：小明
+        我的性别是：男
+
+        ------------------*/
+        
+        console.group();
+        console.info("我的名字是：" + she.attr("fullname") + "\n我的性别是：" + she.attr("gender"));
+        console.groupEnd();
+        /*------[执行结果]------
+
+        我的名字是：小红
+        我的性别是：女
+
+        ------------------*/
+
+        me.attr({
+                "words-limit": 3,
+                "words-emote": "微笑"
+        });
+        me.words("我喜欢看视频。");
+        me.words("我们的办公室太漂亮了。");
+        me.words("视频里美女真多！");
+        me.words("我平时都看优酷！");
+        
+        console.group();
+        console.log(me.say());
+        /*------[执行结果]------
+
+        小明微笑："我喜欢看视频。我们的办公室太漂亮了。视频里美女真多！"
+
+        ------------------*/
+
+        me.attr({
+                "words-limit": 2,
+                "words-emote": "喊"
+        });
+
+        console.log(me.say());
+        console.groupEnd();
+        /*------[执行结果]------
+
+        小明喊："我喜欢看视频。我们的办公室太漂亮了。"
+
+        ------------------*/
+        
+}catch(e){
+        console.error("执行出错，错误信息: " + e);
+}
+</script>
+</body>
+</html>
