@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+<style>
+#result {
+  border:1px solid gray;
+  width:200px;
+  display: none;
+}
+#result li {
+  list-style-type: none;
+}
+#result li:hover {
+  background-color: blue;
+}
+.blue {
+  background-color: blue;
+}
+</style> 
+</head>
+<body>
+<!-- 人人网笔试题
+1.  对 input框中输入的字符进行匹配，将匹配到的内容以菜单的形式展现在  input框的下方；
+2.  只针对英文字符进行匹配，并且匹配到的内容在菜单中加粗；   
+3.  通过键盘上的上下箭头可以对菜单进行选择，按下回车后将选中的内容写入到 input框中； -->
+<input id="txt" type="text" placeholder="请输入">
+<div id="result">
+</div>
+<script>
+var txt =  document.getElementById("txt");
+var result = document.getElementById("result");
+var array = ["tyq","tyqq","tyqqq","tyqqqq","ttyq","ttyyq","lf","llf"];
+var i = -1;//用来给上下按钮计算的标识位
+/**
+ * @description 输入字符响应
+ * @author 刘放 brizer@foxmail.com 
+ * @date 2016/1/1 11:35
+ */
+txt.onkeyup = function(e){
+  //如果是上方向键和下方向键和回车键，则不响应
+  if(e.keyCode == 40 ||e.keyCode == 38||e.keyCode == 13){
+
+  }else{
+    var str = txt.value;
+    //console.log("str:" + str);
+    var resultArray = [];
+    var html = "";
+    for(var i=0;i<array.length;i++){
+      if(array[i].indexOf(str)!=-1){
+        resultArray.push(array[i]);
+      }
+    }
+    if(resultArray.length>0){
+      result.style.display="block";
+      for(var i =0;i<resultArray.length;i++){
+        html += "<li>" + resultArray[i] + "</li>";
+      }
+      if(str == ""){
+        result.innerHTML = "";
+        result.style.display = "none";
+      }
+      result.innerHTML = html;
+    }
+  }
+}
+
+txt.onkeydown = function(e){
+  //如果按到下箭头
+  if(e.keyCode == 40){
+    i++;
+    if(i==result.childNodes.length){
+      i=0;
+    }
+    Array.prototype.forEach.call(result.childNodes,function(value,index,array){
+      value.className = "";
+    });
+    result.childNodes[i].className = "blue";   
+  }
+  //上箭头
+  if(e.keyCode == 38){
+    if(i==0){
+      i = result.childNodes.length;
+    }
+    if(i>0){
+      i--;
+    }
+    Array.prototype.forEach.call(result.childNodes,function(value,index,array){
+      value.className = "";
+    });
+    result.childNodes[i].className = "blue";  
+  }
+  //回车按钮
+  if(e.keyCode == 13){
+    var value = result.childNodes[i].innerHTML;
+    txt.value = value;
+    result.style.display = "none";
+    i = -1;
+  }
+
+}
+/**
+ * @description 失去焦点后
+ * @author 刘放 brizer@foxmail.com 
+ * @date 2016/1/1
+ */
+txt.onblur = function(){
+  if(txt.value == null || txt.value == ""){
+    result.innerHTML = "";
+    result.style.display = "none";
+    i = -1;
+  }
+}
+/**
+ * @description 鼠标选中响应
+ * @author 刘放 brizer@foxmail.com 
+ * @date 2016/1/1 11:42
+ */
+result.onclick = function(e){
+  var target = e.target;
+  //console.log(target.innerHTML);
+  txt.value = target.innerHTML;
+  this.style.display = "none";
+  i = -1;
+}
+</script> 
+</body>
+</html>

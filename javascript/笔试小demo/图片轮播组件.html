@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+<style>
+.body>div{
+  display:inline-block;
+}
+.pic {
+  float:left;
+  display: inline-block;
+  width:50px;
+  height:50px;
+  border:1px solid red;
+}
+.show {
+  height: 52px;
+  width:260px;
+  overflow:hidden; 
+}
+.content {
+  position:relative;
+  width:472px;
+  height:52px;
+}
+#left-arrow,#right-arrow {
+  cursor: pointer;
+}
+</style> 
+</head>
+<body>
+<!-- 人人网笔试题：
+1.  每点击一次右箭头，图片区域向左滚动出一张图片，反之相同；   
+2.  当发现图片滚动到末尾时，响应的箭头变成不可点击状态；   
+3.  鼠标在图片区域内滑动滚轮，图片会随着鼠标滚轮的方向进行响应的滚动；    --> 
+  <div class="body">
+    <div id="left-arrow"><=</div>
+    <div class="show">
+      <div class="content">
+        <div class="pic" id="p1">图片1</div>
+        <div class="pic" id="p2">图片2</div>
+        <div class="pic" id="p3">图片3</div>
+        <div class="pic" id="p4">图片4</div>
+        <div class="pic" id="p5">图片5</div>
+        <div class="pic" id="p6">图片6</div>
+        <div class="pic" id="p7">图片7</div>
+        <div class="pic" id="p8">图片8</div>
+      </div>
+    </div>
+    <div id="right-arrow">=></div>
+  </div>
+<script>
+  var content = document.querySelector(".content");
+  var aleft = document.getElementById("left-arrow");
+  var aright = document.getElementById("right-arrow");
+  aleft.addEventListener("click",function(){
+    var left = content.style.left;
+    left = left.slice(0,-2);
+    if(left<-104){
+
+    }else{
+      left = left - 52;
+    }
+    left = left + "px";
+    content.style.left = left;
+  },false);
+  aright.addEventListener("click",function(){
+    var left = content.style.left;
+    left = left.slice(0,-2);
+    if(left>=0||left == ''){
+
+    }else{
+      left = parseInt(left) + 52;
+    }
+    left =left +"px";
+    content.style.left = left;
+  },false);
+  var show = document.querySelector(".show");
+ /**
+   * @description 监听鼠标滚轮事件
+   * @author 刘放 brizer@foxmail.com 
+   * @date 2015/12/31
+   */ 
+  show.addEventListener("mousewheel",function(e){
+    //console.log(e.wheelDelta);
+    var left =content.style.left;
+    left = left.slice(0,-2);
+    if(e.wheelDelta>0){
+      if(left<-104){
+  
+      }else{
+        left = left - 52;
+      }
+      left = left + "px";
+      content.style.left = left;
+    }else if(e.wheelDelta<0){
+      if(left>=0||left == ''){
+
+      }else{
+        left = parseInt(left) + 52;
+      }
+      left =left +"px";
+      content.style.left = left;      
+    }
+  },false);
+</script> 
+</body>
+</html>

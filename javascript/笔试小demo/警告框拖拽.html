@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+<style>
+#alert-dialog {
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:300px;
+  height:200px;
+  margin:-100px -150px;
+  border:1px solid gray;
+}
+#alert-dialog li {
+  list-style-type: none;
+}
+.close {
+  position: relative;
+  left:120px;
+  background-color: gray;
+  cursor: pointer;
+}
+.content {
+  height:100px;
+  text-align: center;
+  line-height:100px;
+}
+.submit {
+  position: relative;
+  top: -20px;
+  left: 120px;
+  padding: 10px;
+  cursor:pointer;
+}
+</style> 
+</head>
+<body>
+<!-- 人人网笔试题
+1.  分别实现类似于系统的  alert、confirm、prompt对话框；   
+2.  对话框大小根据提示内容进行自适应（有一个最小宽高），默认出现在页面的水平垂直居中的位置；   
+3.  对话框可拖动；   
+4.  对话框中的事件模拟系统对话框的事件（例如：alert 对话框，点击确定按钮，对话框消失）；   
+5.  解决IE6被 select控件遮挡的问题；   --> 
+
+<div id="alert-dialog">
+  <ul>
+    <li><span class="title">来自127.0.0.1</span><span class="close">X</span></li>
+    <li><p class="content">hello,my name is liufang</p></li>
+    <li><button class="submit">确定</button></li>
+  </ul>
+</div>
+
+<script>
+var alert_dialog = document.getElementById("alert-dialog");
+var submit = document.querySelector(".submit");
+var close = document.querySelector(".close");
+/**
+ * @description 添加关闭事件
+ * @author 刘放 brizer@foxmail.com 
+ * @date 2016/1/1
+ */
+submit.addEventListener("click",function(){
+  closeDiv(alert_dialog);
+},false);
+close.addEventListener("click",function(){
+  closeDiv(alert_dialog);
+},false);
+
+function closeDiv(div){
+  div.style.display = "none";
+}
+/**
+ * @description 拖拽div
+ * @author 刘放 brizer@foxmail.com 
+ * @date 2016/1/1
+ */
+alert_dialog.onmousedown = function(e){
+  var mleft = e.clientX;
+  var mtop = e.clientY;
+  console.log("mleft:"+mleft+",mtop:"+mtop);
+  var left = this.offsetLeft;
+  var top = this.offsetTop;
+  console.log("left:"+left+",top:"+top);
+  var difLeft = mleft-left;
+  var difTop = mtop-top;
+  document.onmousemove = function(e){
+    console.log("difleft:"+difLeft+",diftop:"+difTop);
+    var mleft = e.clientX;
+    var mtop = e.clientY;
+    var left = mleft - difLeft;
+    var top = mtop - difTop;
+    console.log("left:"+left+",top:"+top);
+    if(document.documentElement.clientWidth-alert_dialog.clientWidth<left){
+      left = document.documentElement.clientWidth-alert_dialog.clientWidth;
+    }
+    if(left<0){
+      left = 0;
+    }
+    if(document.documentElement.clientHeight - alert_dialog.clientHeight<top){
+      top = document.documentElement.clientHeight - alert_dialog.clientHeight;
+    }
+    if(top<0){
+      top = 0;
+    }
+    alert_dialog.style.left = parseFloat(left)+ 150 + "px";
+    alert_dialog.style.top = parseFloat(top)+ 100 + "px";
+  }
+  document.onmouseup = function(){
+    this.onmousemove=null;
+    this.onmouseup=null;
+  }
+}
+
+
+</script> 
+</body>
+</html>
