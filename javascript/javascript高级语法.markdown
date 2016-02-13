@@ -1,8 +1,17 @@
-﻿# javascript高级语法
+# javascript高级语法
 
 标签（空格分隔）： javascript
 
 ---
+
+##**javascript全套语法教程**
+
+http://javascript.ruanyifeng.com/
+
+相当全面
+
+---
+
 
 ##eval##
 [eval的用法][1]
