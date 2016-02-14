@@ -62,16 +62,17 @@
 ##**ReactJS**
 |日期|标题|参考|分类|关键字|
 |-------|-----|----|----|----|
-|2016-02-13| [组件API][31] |React官网|React|setState replaceState isMounted Refs|
-|2016-02-12| [顶层API][32] |React官网|React|createClass  React.Children.*|
-|2016-02-11| [表单组件][33] |React官网|React|value defaultValue|
-|2016-02-11| [props传递][34] |React官网|React|props ...this.props|
-|2016-02-10| [组件复用][35] |React官网|React|mixins ProtoTypes ...props|
-|2016-02-09| [组件拼装][36] |React官网|React|key virtualDom props.children|
-|2016-02-09| [state交互 ][37]|React官网|React|state 使用场景|
-|2016-02-08| [JSX语法][38] |React官网|React|createElement ...props|
-|2016-02-05| [入门教程][39] |React官网|React|createClass props map state|
-|2016-02-05| [HelloWorld][40] |React官网|React||
+|2016-02-14| [组件的生命周期][31] |React官网|React|componentDidMount componentWillUnmount|
+|2016-02-13| [组件API][32] |React官网|React|setState replaceState isMounted Refs|
+|2016-02-12| [顶层API][33] |React官网|React|createClass  React.Children.*|
+|2016-02-11| [表单组件][34] |React官网|React|value defaultValue|
+|2016-02-11| [props传递][35] |React官网|React|props ...this.props|
+|2016-02-10| [组件复用][36] |React官网|React|mixins ProtoTypes ...props|
+|2016-02-09| [组件拼装][37] |React官网|React|key virtualDom props.children|
+|2016-02-09| [state交互 ][38]|React官网|React|state 使用场景|
+|2016-02-08| [JSX语法][39] |React官网|React|createElement ...props|
+|2016-02-05| [入门教程][40] |React官网|React|createClass props map state|
+|2016-02-05| [HelloWorld][41] |React官网|React||
 
 
 
@@ -79,8 +80,8 @@
 ##**web工程化**
 |日期|标题|参考|分类|关键字|
 |-------|-----|----|----|----|
-|2016-02-14| [浏览器开发工具使用指南之二][41] |社区|chrome devtools|Console相关命令 CommandLine相关命令|
-|2016-02-12| [浏览器开发工具使用指南之一][42] |社区|chrome devtools|Elements Resources Profiles Timelines|
+|2016-02-14| [浏览器开发工具使用指南之二][42] |社区|chrome devtools|Console相关命令 CommandLine相关命令|
+|2016-02-12| [浏览器开发工具使用指南之一][43] |社区|chrome devtools|Elements Resources Profiles Timelines|
 
 
 ---
@@ -116,15 +117,16 @@
   [28]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/AngularJS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/Angular%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E7%AC%AC%E4%B8%89%E7%AB%A0module.md
   [29]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/AngularJS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A.md
   [30]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/AngularJS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%88%9D%E8%AF%86AngularJS.md
-  [31]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E5%8D%81%E8%AF%BE%E7%BB%84%E4%BB%B6API.md
-  [32]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E4%B9%9D%E8%AF%BE%E9%A1%B6%E5%B1%82API.md
-  [33]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E5%85%AB%E8%AF%BE%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6.md
-  [34]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E4%B8%83%E8%AF%BEprops%E4%BC%A0%E9%80%92.md
-  [35]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E5%85%AD%E8%AF%BE%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%BB%84%E4%BB%B6.md
-  [36]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E4%BA%94%E8%AF%BE%E7%BB%84%E4%BB%B6%E6%8B%BC%E8%A3%85.md
-  [37]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E5%9B%9B%E8%AF%BEstate%E4%BA%A4%E4%BA%92.md
-  [38]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E4%B8%89%E8%AF%BEJSX%E8%AF%AD%E6%B3%95.md
-  [39]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E4%BA%8C%E8%AF%BE%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B.md
-  [40]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E4%B8%80%E8%AF%BEHelloWorld.md
-  [41]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/ChromeDevtools/Chrome%20Devtools%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%B9%8B%E4%BA%8C.md
-  [42]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/ChromeDevtools/chrome%20devtools%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%B9%8B%E4%B8%80.md
+  [31]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E5%8D%81%E4%B8%80%E8%AF%BE%E7%BB%84%E4%BB%B6%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.md
+  [32]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E5%8D%81%E8%AF%BE%E7%BB%84%E4%BB%B6API.md
+  [33]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E4%B9%9D%E8%AF%BE%E9%A1%B6%E5%B1%82API.md
+  [34]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E5%85%AB%E8%AF%BE%E8%A1%A8%E5%8D%95%E7%BB%84%E4%BB%B6.md
+  [35]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E4%B8%83%E8%AF%BEprops%E4%BC%A0%E9%80%92.md
+  [36]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E5%85%AD%E8%AF%BE%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%BB%84%E4%BB%B6.md
+  [37]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E4%BA%94%E8%AF%BE%E7%BB%84%E4%BB%B6%E6%8B%BC%E8%A3%85.md
+  [38]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E5%9B%9B%E8%AF%BEstate%E4%BA%A4%E4%BA%92.md
+  [39]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E4%B8%89%E8%AF%BEJSX%E8%AF%AD%E6%B3%95.md
+  [40]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E4%BA%8C%E8%AF%BE%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B.md
+  [41]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E4%B8%80%E8%AF%BEHelloWorld.md
+  [42]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/ChromeDevtools/Chrome%20Devtools%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%B9%8B%E4%BA%8C.md
+  [43]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/ChromeDevtools/chrome%20devtools%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%B9%8B%E4%B8%80.md
