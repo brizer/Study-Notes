@@ -83,17 +83,18 @@
 ##**webpack**
 |日期|标题|参考|分类|关键字|
 |-------|-----|----|----|----|
-|2016-02-20| [入门教程][46] |官网|webpack|loader config|
-|2016-02-20| [简介][47] |官网|webpack|模块加载 资源管理|
+|2016-02-25| [深入教程][46] |官网|webpack|自定义命令 配置服务器 自动刷新|
+|2016-02-20| [入门教程][47] |官网|webpack|loader config|
+|2016-02-20| [简介][48] |官网|webpack|模块加载 资源管理|
 
 
 ---
 ##**web工程化**
 |日期|标题|参考|分类|关键字|
 |-------|-----|----|----|----|
-|2016-02-23| [浏览器开发工具使用指南之三][48] |社区|chrome devtools|移动web调试仿真|
-|2016-02-14| [浏览器开发工具使用指南之二][49] |社区|chrome devtools|Console相关命令 CommandLine相关命令|
-|2016-02-12| [浏览器开发工具使用指南之一][50] |社区|chrome devtools|Elements Resources Profiles Timelines|
+|2016-02-23| [浏览器开发工具使用指南之三][49] |社区|chrome devtools|移动web调试仿真|
+|2016-02-14| [浏览器开发工具使用指南之二][50] |社区|chrome devtools|Console相关命令 CommandLine相关命令|
+|2016-02-12| [浏览器开发工具使用指南之一][51] |社区|chrome devtools|Elements Resources Profiles Timelines|
 
 
 ---
@@ -144,8 +145,9 @@
   [43]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E4%B8%89%E8%AF%BEJSX%E8%AF%AD%E6%B3%95.md
   [44]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E4%BA%8C%E8%AF%BE%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B.md
   [45]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/React/%E7%AC%AC%E4%B8%80%E8%AF%BEHelloWorld.md
-  [46]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/WebPack/002%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B.md
-  [47]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/WebPack/001%E7%AE%80%E4%BB%8B.md
-  [48]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/ChromeDevtools/Chrome%20Devtools%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%B9%8B%E4%B8%89.md
-  [49]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/ChromeDevtools/Chrome%20Devtools%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%B9%8B%E4%BA%8C.md
-  [50]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/ChromeDevtools/chrome%20devtools%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%B9%8B%E4%B8%80.md
+  [46]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/WebPack/003%E6%B7%B1%E5%85%A5%E6%95%99%E7%A8%8B.md
+  [47]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/WebPack/002%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B.md
+  [48]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/WebPack/001%E7%AE%80%E4%BB%8B.md
+  [49]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/ChromeDevtools/Chrome%20Devtools%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%B9%8B%E4%B8%89.md
+  [50]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/ChromeDevtools/Chrome%20Devtools%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%B9%8B%E4%BA%8C.md
+  [51]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/ChromeDevtools/chrome%20devtools%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%B9%8B%E4%B8%80.md
