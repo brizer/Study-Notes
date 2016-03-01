@@ -101,6 +101,14 @@
 
 
 ---
+##**模板语言**
+|日期|标题|参考|分类|关键字|
+|-------|-----|----|----|----|
+|2016-03-01| [FreeMarker学习笔记一][55] |社区|FreeMarker|内置指令 宏定义和使用 变量 命名空间|
+
+
+
+---
 
 
   [1]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E8%AF%BE%E4%BD%99%E5%AD%A6%E4%B9%A0/map%E6%9B%BF%E4%BB%A3for%E5%BE%AA%E7%8E%AF.md
@@ -157,3 +165,4 @@
   [52]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/ChromeDevtools/Chrome%20Devtools%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%B9%8B%E4%B8%89.md
   [53]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/ChromeDevtools/Chrome%20Devtools%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%B9%8B%E4%BA%8C.md
   [54]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/ChromeDevtools/chrome%20devtools%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%B9%8B%E4%B8%80.md
+  [55]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/Freemarker/001Freemarker%E6%A8%A1%E6%9D%BF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80.md
