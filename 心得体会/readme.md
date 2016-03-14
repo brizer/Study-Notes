@@ -6,12 +6,20 @@
 ##**Javascript**
 |日期|标题|参考|分类|关键字|
 |-------|-----|----|----|----|
+<<<<<<< HEAD
 |2016-03-14|[事件处理][1]|编写可维护的javascript第七章|javascript|隔离应用逻辑|
+=======
+|2016-03-14|[事件处理][1] |编写可维护的javascript第七章|javascript|隔离应用逻辑|
+>>>>>>> origin/master
 |2016-03-14|[避免使用全局变量][2] |编写可维护的javascript第六章|javascript|命名空间 零全局变量|
 |2016-03-14|[UI层的松耦合][3] |编写可维护的javascript第五章|javascript|松耦合|
 |2016-03-12|[变量函数和运算符][4] |编写可维护的javascript第四章|javascript|变量声明 严格模式|
 |2016-03-12|[语句和表达式][5] |编写可维护的javascript第三章|javascript|for-in|
+<<<<<<< HEAD
 |2016-03-12| [注释][6]|编写可维护的javascript第二章|javascript|注释|
+=======
+|2016-03-12| [注释][6] |编写可维护的javascript第二章|javascript|注释|
+>>>>>>> origin/master
 |2016-03-12| [基本格式化][7] |编写可维护的javascript第一章|javascript|换行 命名 直接量|
 |2016-02-10| [map替代循环][8] |社区|javascript|Array.prototype.map|
 |2016-02-09| [异步操作][9] |社区|javascript|promise generator async|
@@ -117,6 +125,7 @@
 ##**CSS预处理**
 |日期|标题|参考|分类|关键字|
 |-------|-----|----|----|----|
+<<<<<<< HEAD
 |2016-03-04| [Sass移动适配解决方案][63] |项目经验|Sass|rem 水平宽度处理|
 |2016-03-04| [Sass基本用法][64] |社区|Sass|变量 嵌套 mixins|
 
@@ -127,6 +136,9 @@
 |-------|-----|----|----|----|
 |2016-03-10| [StateMan实践之一][65] |项目经验|StateMan|首次使用，项目中配置实践|
 
+=======
+|2016-03-04| [Sass基本用法][63] |社区|Sass|变量 嵌套 mixins|
+>>>>>>> origin/master
 
 
 
@@ -134,9 +146,12 @@
 ---
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/master
   [1]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%BC%96%E5%86%99%E5%8F%AF%E7%BB%B4%E6%8A%A4%E7%9A%84javascript/007%E7%AC%AC%E4%B8%83%E7%AB%A0%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86.md
   [2]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%BC%96%E5%86%99%E5%8F%AF%E7%BB%B4%E6%8A%A4%E7%9A%84javascript/006%E7%AC%AC%E5%85%AD%E7%AB%A0%E9%81%BF%E5%85%8D%E4%BD%BF%E7%94%A8%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F.md
   [3]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%BC%96%E5%86%99%E5%8F%AF%E7%BB%B4%E6%8A%A4%E7%9A%84javascript/005%E7%AC%AC%E4%BA%94%E7%AB%A0UI%E5%B1%82%E7%9A%84%E6%9D%BE%E8%80%A6%E5%90%88.md
@@ -199,6 +214,10 @@
   [60]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/ChromeDevtools/Chrome%20Devtools%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%B9%8B%E4%BA%8C.md
   [61]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/ChromeDevtools/chrome%20devtools%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E4%B9%8B%E4%B8%80.md
   [62]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/Freemarker/001Freemarker%E6%A8%A1%E6%9D%BF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80.md
+<<<<<<< HEAD
   [63]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/Sass/001Sass%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md
   [64]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/StateMan/StateMan%E5%AE%9E%E8%B7%B5%E4%B9%8B%E4%B8%80.md
   [65]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/StateMan/StateMan%E5%AE%9E%E8%B7%B5%E4%B9%8B%E4%B8%80.md
+=======
+  [63]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/Sass/001Sass%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md
+>>>>>>> origin/master
