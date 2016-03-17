@@ -6,6 +6,7 @@
 ##**Javascript**
 |日期|标题|参考|分类|关键字|
 |-------|-----|----|----|----|
+|2016-03-17|[原型](https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/javascript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/001%E7%AC%AC%E4%BA%94%E7%AB%A0%E5%8E%9F%E5%9E%8B.md "") |javascript面向对象编程第五章|javascript|hasOwnProperty propertyIsEnumerable constructor|
 |2016-03-14|[抛出自定义错误][1] |编写可维护的javascript第十章|javascript|throw Error try-catch|
 |2016-03-14|[配置数据分离][2] |编写可维护的javascript第九章|javascript|json jsonp 配置数据|
 |2016-03-14|[避免空比较][3] |编写可维护的javascript第八章|javascript|typeof instanceof toString|
