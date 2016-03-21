@@ -39,5 +39,41 @@ $.when($.ajax({
 其中的d1,d2,d3分别是3个ajax的返回结果。我们去d1[0]的原因是它才是最后的数据集合，d1[1]则是success的状态值。
 
 
+---
+
+再来看看我从一篇文章中发现的例子，个人觉得比较典型：
+
+```
+var username = 'testuser';
+var fileToSearch = 'README.md';
+
+$.getJSON('https://api.github.com/user/' + username + '/repositories')
+  .then(function(repositories) {
+    return repositories[0].name;
+  })
+  .then(function(lastUpdatedRepository) {
+    return $.getJSON('https://api.github.com/user/' + username + '/repository/' + lastUpdatedRepository + '/files');
+  })
+  .then(function(files) {
+    var README = null;
+
+    for (var i = 0; i < files.length; i++) {
+      if (files[i].name.indexOf(fileToSearch) >= 0) {
+        README = files[i].path;
+
+        break;
+      }
+    }
+
+    return README;
+  })
+  .then(function(README) {
+    return $.getJSON('https://api.github.com/user/' + username + '/repository/' + lastUpdatedRepository + '/file/' + README + '/content');
+  })
+  .then(function(content) {
+    console.log(content);
+  });
+```
+
 
 
