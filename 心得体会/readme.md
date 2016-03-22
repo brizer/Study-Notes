@@ -58,6 +58,14 @@
 |-------|-----|----|----|----|
 |2016-03-16|[异步when用法][29] |项目经验|jQuery|when ajax done|
 
+---
+##**Nej**
+|日期|标题|参考|分类|关键字|
+|-------|-----|----|----|----|
+|2016-03-22|[模块化开发](https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/Nej/001%E6%A8%A1%E5%9D%97%E5%8C%96.md "") |社区|Nej|dispatcher _$$Module location|
+
+
+
 
 ---
 ##**AngularJS**
