@@ -40,6 +40,41 @@ compile选项可以返回一个对象或函数。
 
 这样指令的自定义创建配置就大体说完了，在后面的应用中我会进行详细的配置的。
 
+将项目中一个使用nej的datepicker组件封装为自定义指令的关于link配置的实例展示：
+
+```
+    adminApp.directive("datePicker", function(){
+        var _datePickerUI = {};
+ 
+        function genPagerUI(scope, element, attrs){
+            if(!!_datePickerUI[attrs.flag]){
+                _datePickerUI[attrs.flag] = eu._$$DatepickUI ._$recycle(_datePickerUI[attrs.flag]);
+            }
+            _datePickerUI[attrs.flag] = eu._$$DatepickUI._$allocate({
+                parent: element[0],
+                date: scope.time,
+                onchange:function(_data){
+                    scope.time = _data.totalData;
+                    scope.$apply();
+                }._$bind(this)
+            });
+        }
+        return {
+            restrict: 'E',
+            scope: {
+                time: '=time',
+            },
+            link: function (scope, element, attrs) {
+                scope.$watch('time', function () {
+                    genPagerUI(scope, element, attrs);
+                });
+            }
+        };
+    });
+```
+
+
+
 ---
 
 ##**ngModel**
