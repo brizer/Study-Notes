@@ -164,6 +164,28 @@ ${test?upper_case?html}
 
 ![images](./images/1-5.png)
 
+
+###**number_to_datetime**
+
+一个转换时间格式的内建函数
+
+```
+    <#list liveDtos as live>
+    <#setting datetime_format="MM月dd日 HH:mm"/>
+      <#if live_index lt 2>
+       <a class="c f-fc3 f-thide" data-index="${live_index+1}" data-name="${live.courseName?default('')?html}" href="${courseIntroPrefix?replace('{id}',live.courseId?default(0))}" target="_blank" title="${live.courseName?default('')?html}">
+        [${live.liveStartTime?number_to_datetime}] ${live.courseName?default('')?html}
+       <#if live.free?default(0) == 1>（免费）</#if>
+      </a>
+      </#if>
+     </#list>
+```
+
+
+
+
+
+
 ---
 
 ##**插值**
