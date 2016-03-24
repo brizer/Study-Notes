@@ -164,13 +164,63 @@ Inside myDirective:wow,this is cool
 从第四行可以看出指令外不能访问到指令内的作用域了。
 
 
+**scope取值**
+
+前面我们说到scope取true则是继承父类的作用域，我们再来看看scope的其他取值：
+
+```
+<body>
+
+
+  <div ng-init="myProperty = 'wow, this is cool'"></div>
+  Surrounding scope: {{ myProperty }}
+  <div my-inherit-scope-directive="SomeCtrl">
+    Inside an directive with inherited scope: {{ myProperty }}
+  </div>
+  <div my-directive>
+    Inside myDirective, isolate scope: {{ myProperty }}
+  <div>
+
+  <script>
+    angular.module('myApp', [])
+    .directive('myDirective', function() {
+      return {
+        restrict: 'A',
+        scope: {}
+      };
+    })
+    .directive('myInheritScopeDirective', function() {
+      return {
+        restrict: 'A',
+        scope: true
+      };
+    })
+  </script>
+
+</body>
+```
+
+结果为：
+```
+Surrounding scope: wow, this is cool
+Inside an directive with inherited scope: wow, this is cool
+Inside myDirective, isolate scope:
+```
+
+说明**scope取{}时，不会继承父类作用域**，也就是说它会隔离作用域。
+
+
+
 **绑定策略**
 
 AngularJS提供了几种方法能够将指令内部的隔离作用域，同指令外部的作用域进行绑定。
 为了让新的指令作用域可以访问当前本地作用域中的变量，需要用到下面三种别名中的一种：
-@，使用@符号将本地作用域同DOM属性的值进行绑定。指令内部作用域可以使用外部作用域的变量。
-=，使用=符号将本地作用域同父级作用域上的属性进行双向数据绑定。
-&，使用&对父级作用域进行绑定，以便在其中运行函数。
+
+@，使用@符号将本地作用域同DOM属性的值进行绑定。**指令内部作用域可以使用外部作用域的变量**。
+
+=，使用=符号**将本地作用域同父级作用域上的属性**进行双向数据绑定。
+
+&，使用&对**父级作用域进行绑定**，以便在其中运行函数。
 
 
 ---
