@@ -102,6 +102,7 @@ angular.module("myApp",[])
 ```
 
 说说配置对象中的配置项
+
 **controller**
 
 ```
@@ -112,12 +113,15 @@ controller:function($scope){}
 如果配置对象中设置了controller属性，那么这个**指定的控制器会与路由所创建的新作用域关联**在一起。如果参数值是字符型，会在模块中所有注册过的**控制器中查找对应的内容**，然后与路由关联在一起。如果参数值是函数型，这个函数会**作为模板中DOM元素的控制器**并与模板进行关联。
 
 **template**
+
 AngularJS会将配置对象中的HTML模板渲染到对应的具有ng-view指令的DOM元素中。
 
 **templateUrl**
+
 应用会根据该属性指向的路径读取视图，然后渲染到具有ng-view指令元素中。
 
 **resolve**
+
 ```
 resolve:{
   'data':["$http",function($http){
@@ -134,10 +138,54 @@ resolve:{
 上面的例子中，resolve会发送一个$http请求，并将data的值替换为返回结果的值。列表中的键data会被注入到控制器中，所以在控制器中可以使用它。
 
 **redirectTo**
+
 路径替换。
 
 **reloadOnSearch**
+
 如果设置为true（默认），当$location.search()发生变化时会重新加载路由。如果设置为false，那么当URL中的查询串部分发生变化时就**不会重新加载路由**。这个小窍门对路由嵌套和**原地分页**等需求非常有用。
+
+---
+
+##**使用$stateProvider路由配置**
+
+将项目中的一个使用stateProvider进行多路由设置的demo展示如下：
+
+
+```
+  g.adminApp.config(function($stateProvider,$urlRouterProvider){  
+         $stateProvider
+           .state('aggreLive',{
+            url:'/aggreLive/',
+            templateUrl:'aggreLive.htm',
+            controller:'aggreLive'
+           })
+           .state('aggreVideo',{
+            url:'/aggreVideo/',
+            templateUrl:'aggreVideo.htm',
+            controller:'aggreVideo'
+           }) 
+           .state('aggreTeacher',{
+            url:'/aggreTeacher/',
+            templateUrl:'aggreTeacher.htm',
+            controller:'aggreTeacher'
+           })
+           .state('aggreQuestion',{
+            url:'/aggreQuestion/',
+            templateUrl:'aggreQuestion.htm',
+            controller:'aggreQuestion'
+           })
+           .state('aggreProduct',{
+            url:'/aggreProduct/',
+            templateUrl:'aggreProduct.htm',
+            controller:'aggreProduct'
+           });
+         $urlRouterProvider.otherwise('/aggreLive/');      
+           
+        })
+```
+
+
 
 ---
 
