@@ -150,8 +150,9 @@ Assign
 
 ##**内建函数**
 
-内建函数以？形式提供变量的不同形式或者其他信息。
-Html cap_first lower_case upper_case trim size int
+内建函数以？形式提供变量的不同形式或者其他信息。多个内建函数可以通过?连接来使用。
+Html cap_first lower_case upper_case trim size int number_to_datetime eval
+ default
 
 ![images](./images/1-4.png)
 
@@ -182,6 +183,24 @@ ${test?upper_case?html}
 ```
 
 
+###**defaule**
+
+**默认值**
+如果不存在就取默认值，用法举例:
+
+```
+${pageTitle?default("[]")}
+```
+
+###**eval**
+
+将字符串作为ftl模板输出，就和javascript原生的eval有点类似。
+
+用法举例：
+
+```
+${(col['name']?eval)}
+```
 
 
 
