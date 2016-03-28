@@ -182,6 +182,14 @@ ${test?upper_case?html}
      </#list>
 ```
 
+还有一种简单的使用方式：
+
+```
+${item.time?number_to_datetime?string["MM-dd HH:mm"]}
+```
+
+即可解决问题。
+
 
 ###**defaule**
 
