@@ -62,6 +62,7 @@
 ##**Nej**
 |日期|标题|参考|分类|关键字|
 |-------|-----|----|----|----|
+|2016-03-29|[组件化开发](https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/Nej/004%E7%BB%84%E4%BB%B6%E5%8C%96.md "") |社区|Nej|Util UI allocate reset|
 |2016-03-24|[文件依赖](https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/Nej/003%E6%96%87%E4%BB%B6%E4%BE%9D%E8%B5%96.md "") |社区|Nej|define 路径配置|
 |2016-03-23|[模板开发](https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/Nej/002%E6%A8%A1%E6%9D%BF.md "") |社区|Nej|jst item|
 |2016-03-22|[模块化开发](https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/Nej/001%E6%A8%A1%E5%9D%97%E5%8C%96.md "") |社区|Nej|dispatcher _$$Module location|
