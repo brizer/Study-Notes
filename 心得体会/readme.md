@@ -56,7 +56,8 @@
 ##**jQuery**
 |日期|标题|参考|分类|关键字|
 |-------|-----|----|----|----|
-|2016-04-1|[瀑布流插件Masonry](https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/jQuery/002jQuery%E6%8F%92%E4%BB%B6%E4%B9%8B%E7%80%91%E5%B8%83%E6%B5%81Masonry.md "") |项目经验|jQuery|masonry 瀑布流|
+|2016-04-01|[幻灯片插件Swiper](https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/jQuery/003jQuery%E5%80%BC%E5%B9%BB%E7%81%AF%E7%89%87%E6%8F%92%E4%BB%B6swiper.md "") |项目经验|jQuery|swiper 幻灯片|
+|2016-04-01|[瀑布流插件Masonry](https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/jQuery/002jQuery%E6%8F%92%E4%BB%B6%E4%B9%8B%E7%80%91%E5%B8%83%E6%B5%81Masonry.md "") |项目经验|jQuery|masonry 瀑布流|
 |2016-03-16|[异步when用法][29] |项目经验|jQuery|when ajax done|
 
 ---
