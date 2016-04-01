@@ -127,6 +127,7 @@
 ##**web工程化**
 |日期|标题|参考|分类|关键字|
 |-------|-----|----|----|----|
+|2016-04-01| [puer使用手册][70] |项目经验|puer|实时刷新 本地模拟ajax 移动端调试|
 |2016-02-23| [浏览器开发工具使用指南之三][63] |社区|chrome devtools|移动web调试仿真|
 |2016-02-14| [浏览器开发工具使用指南之二][64] |社区|chrome devtools|Console相关命令 CommandLine相关命令|
 |2016-02-12| [浏览器开发工具使用指南之一][65] |社区|chrome devtools|Elements Resources Profiles Timelines|
@@ -230,3 +231,4 @@
   [67]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/Sass/002Sass%E4%B9%8B%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.md
   [68]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/Sass/001Sass%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md
   [69]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/StateMan/StateMan%E5%AE%9E%E8%B7%B5%E4%B9%8B%E4%B8%80.md
+  [70]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/puer/puer%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0.md 
