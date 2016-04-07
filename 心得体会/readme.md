@@ -56,6 +56,7 @@
 ##**jQuery**
 |日期|标题|参考|分类|关键字|
 |-------|-----|----|----|----|
+|2016-04-07|[动效组件点赞加一特效](https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/jQuery/005jQuery%E7%82%B9%E8%B5%9E%E7%89%B9%E6%95%88.md "") |项目经验|jQuery|动效组件 入口出口|
 |2016-04-05|[面向对象写法](https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/jQuery/004jQuery%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%86%99%E6%B3%95.md "") |项目经验|jQuery|面向对象写法|
 |2016-04-01|[幻灯片插件Swiper](https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/jQuery/003jQuery%E5%80%BC%E5%B9%BB%E7%81%AF%E7%89%87%E6%8F%92%E4%BB%B6swiper.md "") |项目经验|jQuery|swiper 幻灯片|
 |2016-04-01|[瀑布流插件Masonry](https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/jQuery/002jQuery%E6%8F%92%E4%BB%B6%E4%B9%8B%E7%80%91%E5%B8%83%E6%B5%81Masonry.md "") |项目经验|jQuery|masonry 瀑布流|
