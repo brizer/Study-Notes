@@ -130,6 +130,7 @@
 ##**web工程化**
 |日期|标题|参考|分类|关键字|
 |-------|-----|----|----|----|
+|2016-04-11| [base64替换微型图片][71] |项目经验|性能优化|base64 图片大小压缩|
 |2016-04-01| [puer使用手册][70] |项目经验|puer|实时刷新 本地模拟ajax 移动端调试|
 |2016-02-23| [浏览器开发工具使用指南之三][63] |社区|chrome devtools|移动web调试仿真|
 |2016-02-14| [浏览器开发工具使用指南之二][64] |社区|chrome devtools|Console相关命令 CommandLine相关命令|
@@ -235,3 +236,4 @@
   [68]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/Sass/001Sass%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md
   [69]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/StateMan/StateMan%E5%AE%9E%E8%B7%B5%E4%B9%8B%E4%B8%80.md
   [70]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/puer/puer%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0.md 
+  [71]: https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E8%AF%BE%E4%BD%99%E5%AD%A6%E4%B9%A0/base64%E6%9B%BF%E6%8D%A2%E5%BE%AE%E5%9E%8B%E5%9B%BE%E7%89%87.md   
