@@ -6,6 +6,7 @@
 ##**Javascript**
 |日期|标题|参考|分类|关键字|
 |-------|-----|----|----|----|
+|2016-04-18|[跨域问题解决方案](https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E8%AF%BE%E4%BD%99%E5%AD%A6%E4%B9%A0/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95.md "") |社区|javascript|JSONP CORS 跨域|
 |2016-04-13|[js复制文本到剪切板](https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E7%A4%BE%E5%8C%BA/Javascript/001%E7%BA%AFjavascript%E5%A4%8D%E5%88%B6%E6%96%87%E6%9C%AC%E5%88%B0%E5%89%AA%E5%88%87%E6%9D%BF.md "") |社区|javascript|复制 剪切板|
 |2016-03-17|[深拷贝和浅拷贝](https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/javascript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/002%E7%AC%AC%E5%85%AD%E7%AB%A0%E7%BB%A7%E6%89%BF.md "深拷贝和浅拷贝") |javascript面向对象编程第六章|javascript|深拷贝 浅拷贝|
 |2016-03-17|[原型](https://github.com/brizer/Study-Notes/blob/master/%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/javascript%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/001%E7%AC%AC%E4%BA%94%E7%AB%A0%E5%8E%9F%E5%9E%8B.md "") |javascript面向对象编程第五章|javascript|hasOwnProperty propertyIsEnumerable constructor|
