@@ -78,25 +78,7 @@ ng-readonly和ng-disabled类似：
 
 ng-selected对应的model为true，则当前option会被选中。
 
-设置默认selected：
 
-html：
-
-```
-   <div class="col-xs-3">
-    <select class="form-control col-xs-3" ng-model="firstTemplate" ng-options="template.id as template.name for template in templates"></select>
-   </div>   
-```
-
-js:
-```
-    g.adminApp.controller("recommendSMSCreate",function($scope,$rootScope,ngdwr,$stateParams,$interval){
-     $rootScope.tabs[0].active = true;
-     
-     $scope.templates = [{id:0,name:'【网易云课堂】'}]; 
-     $scope.firstTemplate = $scope.templates[0].id;        
-    });
-```
 
 **ng-href**
 
@@ -490,6 +472,28 @@ app.controller("CityController",function($scope){
 });
 </script>
 ```
+
+设置默认selected：
+
+html：
+
+```
+   <div class="col-xs-3">
+    <select class="form-control col-xs-3" ng-model="firstTemplate" ng-options="template.id as template.name for template in templates"></select>
+   </div>   
+```
+
+js:
+```
+    g.adminApp.controller("recommendSMSCreate",function($scope,$rootScope,ngdwr,$stateParams,$interval){
+     $rootScope.tabs[0].active = true;
+     
+     $scope.templates = [{id:0,name:'【网易云课堂】'}]; 
+     $scope.firstTemplate = $scope.templates[0].id;        
+    });
+```
+
+
 
 **ng-submit**
 
