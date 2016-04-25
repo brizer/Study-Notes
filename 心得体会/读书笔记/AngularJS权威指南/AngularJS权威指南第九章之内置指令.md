@@ -78,6 +78,26 @@ ng-readonly和ng-disabled类似：
 
 ng-selected对应的model为true，则当前option会被选中。
 
+设置默认selected：
+
+html：
+
+```
+   <div class="col-xs-3">
+    <select class="form-control col-xs-3" ng-model="firstTemplate" ng-options="template.id as template.name for template in templates"></select>
+   </div>   
+```
+
+js:
+```
+    g.adminApp.controller("recommendSMSCreate",function($scope,$rootScope,ngdwr,$stateParams,$interval){
+     $rootScope.tabs[0].active = true;
+     
+     $scope.templates = [{id:0,name:'【网易云课堂】'}]; 
+     $scope.firstTemplate = $scope.templates[0].id;        
+    });
+```
+
 **ng-href**
 
 ng-href是用来取代a标签原有的href的。当使用当前作用域中的属性动态创建URL时，如果插值尚未生效，href会指向404，而**ng-href会等到插值生效后再执行点击链接的行为**。
