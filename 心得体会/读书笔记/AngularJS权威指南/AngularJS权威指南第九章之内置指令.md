@@ -105,6 +105,16 @@ var app = angular.module('app',[]);
 
 ![images](./images/9-3.png)
 
+
+**动态绑定href**
+
+有时候，我们的a标签的href是后端传过来的。可以先过一道model，再传到href中：
+
+```
+<td><label><a ng-href="{{item.link}}" ng-model="item.link">详情</a></label></td> 
+```
+
+
 **ng-src**
 AngularJS会告诉浏览器在ng-src对应的表达式生效之前不要加载图片。和ng-href类似，这里就不举例了。
 
