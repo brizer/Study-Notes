@@ -400,6 +400,35 @@ app.controller("EqController",function($scope){
 
 只要控件的值发生变化，就会触发ng-change对应的函数。
 
+type=file的input标签，ng-change不起作用。解决办法：
+html：
+```
+<input type="file" custom-on-change="uploadFile">
+```
+
+js:
+```
+app.controller('myCtrl', function($scope){
+    $scope.uploadFile = function(event){
+        var files = event.target.files;
+    };
+}); 
+```
+
+自定义指令:
+```
+app.directive('customOnChange', function() {
+  return {
+    restrict: 'A',
+    link: function (scope, element, attrs) {
+      var onChangeHandler = scope.$eval(attrs.customOnChange);
+      element.bind('change', onChangeHandler);
+    }
+  };
+});
+```
+进行手动进行数据绑定即可。
+
 **ng-form**
 
 ng-form用来在一个表单内部嵌套另一个表单，普通的HTML的form标签是不允许嵌套了。
