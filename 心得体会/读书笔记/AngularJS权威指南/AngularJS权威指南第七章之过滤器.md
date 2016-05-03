@@ -136,6 +136,25 @@ number过滤器将数字格式化成文本，它的第二个参数是可选的�
 
 我们连续利用了多个过滤器，用法就是直接|接着|即可。
 
+这里展示项目中写的时间格式自定义过滤器：
+
+``` javascript
+   		g.adminApp.filter('recommendSMSToDate',function(){
+   			return function(_res){
+   				var _date = new Date(_res);
+   				var year = _date.getFullYear();
+   				var month = _date.getMonth() + 1;
+   				var date = _date.getDate();
+   				var hour = _date.getHours();
+   				var minute = _date.getMinutes();
+   				var result = year + "-" + month + "-" + date + "  " + hour + ":" + minute;
+   				return result;   
+   			}
+   		});
+ ```
+ 将时间戳转化为格式：2016-5-3 10:54
+
+
 ---
 ##**表单验证**
 
