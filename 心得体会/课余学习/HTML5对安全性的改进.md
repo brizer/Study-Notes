@@ -47,6 +47,7 @@ Content-Security-Policy: script-src 'self' https://apis.google.com
 script-src控制script标签相关的策略，我们指定了`self`和`https://apis.google.com`作为其值，浏览器就只会下载并执行本域和`https://apis.google.com`的脚本。
 
 还有其他指令：
+
 |指令|作用|
 |----|----|
 |connect-src|限制使用XHR，WebSockets，和EventSource的连接源。|
